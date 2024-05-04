@@ -1,11 +1,15 @@
 ---
 ---
-<div class="w-full bottom-0 text-center py-4 text-xs fixed z-10">
+<footer class="flex flex-row items-center justify-center w-full text-white text-center py-10">
+    <span class="flex">
     Copyright &copy;
-        <span id="copyright">
-        <script type="text/javascript">
-            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+    </span>
+    <span id="copyright" class="flex">
+        <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear().toString()))
         </script>
     </span>
+    <span class="flex">
     &nbsp;Elysseum
-</div>
+    </span>
+</footer>

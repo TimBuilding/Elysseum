@@ -6,47 +6,37 @@ import HomeCallToAction from "../components/HomeCallToAction.astro";
 import Hero from "../components/Hero.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Elysseum</title>
-	</head>
-	<body>
-		<PageLayout />
-		<Hero />
-		<div class="pt-96">
-			<div class="pt-4">
-				<p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
-			</div>
-			<div>
-				<button>Contact Us</button>
-			</div>
-		</div>
-		<div class="bg-[#292929] py-16 px-24">
-			<div>
-				<p class="font-bold text-lg text-center">Our Services</p>
-			</div>
-			<div>
+<PageLayout>
+<Hero/>
+<div class="pt-96">
+    <div class="pt-4">
+        <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
+    </div>
+    <div>
+        <button>Contact Us</button>
+    </div>
+</div>
+<div class="bg-[#292929] py-16 px-24">
+    <div>
+        <p class="font-bold text-lg text-center">Our Services</p>
+    </div>
+    <div>
 
-			</div>
-		</div>
-		<div>
-			<Technologies></Technologies>
-		</div>
-		<div class="py-12 pb-32 px-24 bg-[#e6e6e6] text-black">
-			<div class="text-center">
-				<p class="font-bold text-lg">Why Elysseum?</p>
-			</div>
-			<div>
-				<WhyContent></WhyContent>
-			</div>
-		</div>
-		<div>
-			<HomeCallToAction></HomeCallToAction>
-		</div>
-	</body>
+    </div>
+</div>
+<div>
+    <Technologies></Technologies>
+</div>
+<div class="py-12 pb-32 px-24 bg-[#e6e6e6] text-black">
+    <div class="text-center">
+        <p class="font-bold text-lg">Why Elysseum?</p>
+    </div>
+    <div>
+        <WhyContent></WhyContent>
+    </div>
+</div>
+<div>
+    <HomeCallToAction></HomeCallToAction>
+</div>
 
-</html>
+</PageLayout>

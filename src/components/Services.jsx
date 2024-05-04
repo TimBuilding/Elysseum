@@ -55,9 +55,9 @@ const content = [
 
 const Services = () => {
     return (
-        <>
+        <div className={'p-10'}>
             <StickyScroll content={content}/>
-        </>
+        </div>
     );
 };
 

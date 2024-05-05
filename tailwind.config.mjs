@@ -3,7 +3,7 @@
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {
-    darkMode: ["class"],
+    darkMode: "class",
     content: [
         './pages/**/*.{ts,tsx}',
         './components/**/*.{ts,tsx}',
@@ -79,7 +79,7 @@ export default {
             },
         },
     },
-    plugins: [addVariablesForColors, require("tailwindcss-animate")],
+    plugins: [require("tailwindcss-animate"), addVariablesForColors],
 }
 
 function addVariablesForColors({addBase, theme}) {

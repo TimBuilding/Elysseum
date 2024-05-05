@@ -1,9 +1,9 @@
 import React from 'react';
-import StickyScroll from "@/components/ui/sticky-scroll-reveal.jsx";
+import {StickyScroll} from "@/components/ui/sticky-scroll-reveal.jsx";
 
 const content = [
     {
-        title: "Collaborative Editing",
+        title: "IT Strategy & Planning",
         description:
             "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
         content: (
@@ -55,7 +55,8 @@ const content = [
 
 const Services = () => {
     return (
-        <div className={'p-10'}>
+        <div className={'p-10 w-full flex flex-col items-center justify-center mt-32'}>
+            {/* todo: add fade */}
             <StickyScroll content={content}/>
         </div>
     );

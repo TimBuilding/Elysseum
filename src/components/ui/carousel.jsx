@@ -1,8 +1,8 @@
 import React, { forwardRef, useContext, useEffect, useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/utils/cn";
+import Button from "@/components/ui/button";
 
 const CarouselContext = React.createContext(null);
 
@@ -187,7 +187,6 @@ CarouselPrevious.displayName = "CarouselPrevious";
 
 const CarouselNext = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
-
   return (
     <Button
       ref={ref}

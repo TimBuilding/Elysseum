@@ -83,9 +83,8 @@ const content = [
 const Services = () => {
   return (
     <div
-      className={'p-10 w-full flex flex-col items-center justify-center mt-32'}
+      className={'px-10'}
     >
-      {/* todo: add fade */}
       <StickyScroll content={content} />
     </div>
   );

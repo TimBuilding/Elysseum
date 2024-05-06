@@ -79,7 +79,7 @@ export default {
             },
         },
     },
-    plugins: [require("tailwindcss-animate"), addVariablesForColors],
+    plugins: [require("tailwindcss-animate"), addVariablesForColors, require('tailwind-scrollbar-hide')],
 }
 
 function addVariablesForColors({addBase, theme}) {

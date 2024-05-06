@@ -82,7 +82,7 @@ const content = [
 
 const Services = () => {
   return (
-    <div className={'px-10 relative'}>
+    <div className={'py-10 w-full relative'}>
       <StickyScroll content={content} />
 
       <div className='absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent'></div>

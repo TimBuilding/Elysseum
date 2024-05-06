@@ -3,12 +3,14 @@ import ContactForm from "../components/ContactForm.astro";
 
 export interface ContactFormProps {
     title: string
+    placeholder: string
+    type?: 'input' | 'textarea'
 };
 
-const ContactF: FC<ContactFormProps> = ({ title }) => {
+const ContactForm: FC<ContactFormProps> = ({ title, placeholder, type }) => {
     return (
-        <ContactForm title={title}></ContactForm>
+        <ContactForm title={title} placeholder={placeholder} type={type}></ContactForm>
     )
 }
 
-export default ContactF;
+export default ContactForm

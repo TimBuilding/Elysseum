@@ -5,10 +5,10 @@ export interface ContactFormProps {
     title: string
 };
 
-const ContactForm: FC<ContactFormProps> = ({ title }) => {
+const ContactF: FC<ContactFormProps> = ({ title }) => {
     return (
         <ContactForm title={title}></ContactForm>
     )
 }
 
-export default ContactForm
+export default ContactF;

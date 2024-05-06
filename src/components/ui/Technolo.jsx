@@ -1,10 +1,12 @@
 import { imageConfig } from "astro:assets";
 import InfiniteMovingCards from "../ui/infinite-moving-cards";
 import React from 'react';
+import '../../images/tech.svg';
+
 
 const logo = [
   {
-    name: 'HHH'
+    imageUrl: '../../images/tech.svg'
   },
   {
     name: 'III'

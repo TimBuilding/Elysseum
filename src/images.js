@@ -1,3 +1,0 @@
-// export Images = {
-//     javs: { url }
-// }

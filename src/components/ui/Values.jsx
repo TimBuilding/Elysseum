@@ -37,17 +37,17 @@ const CarouselValues = () => {
   return (
     <Carousel
       opts={{ loop: true, }}
-      className="p-2 w-full max-w-4xl"
+      className="p-2 w-full max-w-4xl h-full max-h-2xl"
     >
       <CarouselContent className="-ml-1 md:-ml-4">
         {values.map((values, index) => {
           return (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <div className="p-1 w-full">
-                <Card className="lg:w-full lg:">
+              <div className="p-1 w-full h-full">
+                <Card className="h-full">
                   <CardContent className="m-4 flex flex-col aspect-video items-center justify-center p-6 pb-10">
                     <div>
-                      <div className="bg-red-500 h-80 max-h-lg mb-8">
+                      <div className="bg-red-500 h-80 max-h-md mb-8">
                       </div>
                       <div className="px-6">
                         <p className="text-4xl font-semibold">{values.title}</p>

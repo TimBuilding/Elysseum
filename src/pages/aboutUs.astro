@@ -6,9 +6,9 @@ import AboutValues from "../components/AboutValues.astro";
 ---
 <PageLayout>
     <div class="xl:flex xl:flex-row">
-        <section class="xl:flex xl:flex-row xl:max-w-4xl xl:w-full">
-            <div class="flex-col mt-2 flex items-center md:w-full">
-                <div class="flex justify-center relative mt-16 pt-20 text-3xl xl:text-5xl xl:-mb-3 font-bold">
+        <section class="xl:flex xl:flex-row xl:max-w-4xl xl:w-full xl:pl-24">
+            <div class="flex-col mt-2 flex items-center">
+                <div class="flex justify-center relative mt-16 pt-20 text-3xl z-10 xl:text-5xl xl:-mb-3 font-bold">
                     <span>About Us</span>
                 </div>
                 <img src="/src/images/Logo.png" alt="Logo Background" class="absolute opacity-20 max-w-3xl">
@@ -22,12 +22,12 @@ import AboutValues from "../components/AboutValues.astro";
         </section>
     
     </div>
-    <section class="my-20 flex flex-col items-center">
+    <section class="my-20 flex flex-col items-center ">
         <Mission></Mission>
     </section>
     <section class="my-20">
         <div class="w-full flex justify-center">
-            <span class="font-bold text-center text-2xl">Our Values</span>
+            <span class="font-bold text-center text-2xl xl:text-3xl">Our Values</span>
         </div>
         <div class="pt-8 flex justify-center">
             <AboutValues />

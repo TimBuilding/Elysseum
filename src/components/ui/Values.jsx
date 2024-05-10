@@ -36,31 +36,31 @@ const CarouselValues = () => {
 
   return (
     <Carousel
-      opts={{ loop: true, }}
-      className="pr-2 w-full max-w-2xl h-full max-h-xl"
+      opts={{ loop: true, align:"start"}}
+      className="pr-2 w-full sm:max-w-md xl:max-w-5xl"
     >
-      <CarouselContent className="-ml-1 md:-ml-4">
+      <CarouselContent className="">
         {values.map((values, index) => {
           return (
-            <CarouselItem key={index} className="flex flex-col items-center">
-              <div className="p-1 w-full h-full">
+            <CarouselItem key={index} className="xl:basis-1/2">
+              <div className="p-1 h-full">
                 <Card className="h-full">
                   <CardContent className="m-4 flex flex-col aspect-video items-center justify-center p-6 pb-10">
                     <div>
-                      <div className="bg-red-500 h-80 max-h-md mb-8">
+                      <div className="bg-red-500 h-80 mb-8 xl:h-60">
                       </div>
                       <div className="px-6">
-                        <p className="text-4xl font-semibold">{values.title}</p>
-                        <p className="my-4 text-xl font-medium">{values.subtitle}</p>
-                        <p className="text-justify leading-6">{values.text}</p>
+                        <p className="text-4xl font-semibold xl:text-2xl">{values.title}</p>
+                        <p className="my-4 text-xl font-medium xl:text-lg">{values.subtitle}</p>
+                        <p className="text-justify leading-6 xl:text-sm">{values.text}</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </CarouselItem>
-          );
-        })};
+          )
+        })}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

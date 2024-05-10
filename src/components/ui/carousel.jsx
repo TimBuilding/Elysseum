@@ -35,26 +35,26 @@ const Carousel = forwardRef(
         axis: orientation === "horizontal" ? "x" : "y",
       },
       plugins
-    );
-    const [canScrollPrev, setCanScrollPrev] = useState(false);
-    const [canScrollNext, setCanScrollNext] = useState(false);
+    )
+    const [canScrollPrev, setCanScrollPrev] = useState(false)
+    const [canScrollNext, setCanScrollNext] = useState(false)
 
     const onSelect = useCallback((api) => {
       if (!api) {
-        return;
+        return
       }
 
       setCanScrollPrev(api.canScrollPrev());
       setCanScrollNext(api.canScrollNext());
-    }, []);
+    }, [])
 
     const scrollPrev = useCallback(() => {
       api?.scrollPrev();
-    }, [api]);
+    }, [api])
 
     const scrollNext = useCallback(() => {
       api?.scrollNext();
-    }, [api]);
+    }, [api])
 
     const handleKeyDown = useCallback(
       (event) => {
@@ -67,7 +67,7 @@ const Carousel = forwardRef(
         }
       },
       [scrollPrev, scrollNext]
-    );
+    )
 
     useEffect(() => {
       if (!api || !setApi) {
@@ -75,7 +75,7 @@ const Carousel = forwardRef(
       }
 
       setApi(api);
-    }, [api, setApi]);
+    }, [api, setApi])
 
     useEffect(() => {
       if (!api) {
@@ -89,7 +89,7 @@ const Carousel = forwardRef(
       return () => {
         api?.off("select", onSelect);
       };
-    }, [api, onSelect]);
+    }, [api, onSelect])
 
     return (
       <CarouselContext.Provider
@@ -116,13 +116,13 @@ const Carousel = forwardRef(
           {children}
         </div>
       </CarouselContext.Provider>
-    );
+    )
   }
-);
+)
 Carousel.displayName = "Carousel";
 
 const CarouselContent = forwardRef(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel();
+  const { carouselRef, orientation } = useCarousel()
 
   return (
     <div ref={carouselRef} className="overflow-hidden">
@@ -141,7 +141,7 @@ const CarouselContent = forwardRef(({ className, ...props }, ref) => {
 CarouselContent.displayName = "CarouselContent";
 
 const CarouselItem = forwardRef(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel();
+  const { orientation } = useCarousel()
 
   return (
     <div
@@ -160,7 +160,7 @@ const CarouselItem = forwardRef(({ className, ...props }, ref) => {
 CarouselItem.displayName = "CarouselItem";
 
 const CarouselPrevious = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
     <Button
@@ -186,7 +186,7 @@ const CarouselPrevious = forwardRef(({ className, variant = "outline", size = "i
 CarouselPrevious.displayName = "CarouselPrevious";
 
 const CarouselNext = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { orientation, scrollNext, canScrollNext } = useCarousel()
   return (
     <Button
       ref={ref}

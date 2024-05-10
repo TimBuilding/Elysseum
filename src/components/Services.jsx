@@ -18,13 +18,12 @@ const content = [
       'We guide organizations through digital transformation by helping them adopt new technologies and reshape their business processes. Our expertise includes cloud computing, automation, data analytics, and emerging technologies.',
     content: (
       <div className='h-full w-full  flex items-center justify-center text-white'>
-        <img
-          src='/linear.webp'
+        {/* <img
           width={300}
           height={300}
           className='h-full w-full object-cover'
           alt='linear board demo'
-        />
+        /> */}
       </div>
     ),
   },
@@ -82,11 +81,8 @@ const content = [
 
 const Services = () => {
   return (
-    <div className={'py-10 w-full relative'}>
+    <div className={'py-20 w-full relative'}>
       <StickyScroll content={content} />
-
-      <div className='absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent'></div>
-      <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent'></div>
     </div>
   );
 };

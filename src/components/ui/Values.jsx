@@ -37,7 +37,7 @@ const CarouselValues = () => {
   return (
     <Carousel
       opts={{ loop: true, }}
-      className="p-2 w-full max-w-4xl h-full max-h-2xl"
+      className="pr-2 w-full max-w-2xl h-full max-h-xl"
     >
       <CarouselContent className="-ml-1 md:-ml-4">
         {values.map((values, index) => {

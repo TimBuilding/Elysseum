@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+import { OpacityIcon } from "@radix-ui/react-icons";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {

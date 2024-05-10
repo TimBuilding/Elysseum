@@ -1,15 +1,15 @@
 import * as React from "react"
-
 import { Card, CardContent } from "@/components/ui/card"
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+  SCarousel,
+  SCarouselContent,
+  SCarouselItem,
+  SCarouselNext,
+  SCarouselPrevious,
+  SCarouselDotIndicator,
+} from "@/components/ui/homeserv"
 
-const CarouselServices = () => {
+const SCarouselServices = () => {
   const serv = [
     {
       title: 'IT Strategy & Planning'
@@ -35,34 +35,35 @@ const CarouselServices = () => {
   ]
 
   return (
-    <Carousel
+    <SCarousel
       opts={{ loop: true, }}
       className="w-full max-w-screen"
     >
-      <CarouselContent className="-ml-1 md:-ml-4">
+      <SCarouselContent className="xl:-ml-1 md:-ml-4">
         {serv.map((serv, index) => {
           return (
-            <CarouselItem key={index} className="flex flex-col items-center basis-1/4">
+            <SCarouselItem key={index} className="flex flex-col items-center md:basis-1/3 lg:basis-1/4">
               <div className="p-1 w-full h-full">
-                <Card className="h-full">
-                  <CardContent className="m-4 flex flex-col aspect-video items-center justify-center p-6 pb-10">
+                <Card className="h-full md:py-4 md:px-6">
+                  <CardContent className="flex flex-col h-full lg:aspect-video items-center justify-center p-6 pb-10">
                     <div>
-                      <div className="px-6">
-                        <p className="text-4xl font-semibold">{serv.title}</p>
+                      <div className="md:px-0 lg:px-6">
+                        <p className="md:text-lg lg:text-4xl font-semibold text-center">{serv.title}</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
-            </CarouselItem>
+            </SCarouselItem>
           );
         })};
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+      </SCarouselContent>
+      <SCarouselPrevious />
+      <SCarouselDotIndicator />
+      <SCarouselNext />
+    </SCarousel>
   )
 }
 
 
-export default CarouselServices;
+export default SCarouselServices;

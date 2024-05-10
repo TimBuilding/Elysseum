@@ -5,36 +5,53 @@ import WhyContent from "../components/WhyContent.astro";
 import HomeCallToAction from "../components/HomeCallToAction.astro";
 import Hero from "../components/Hero.astro";
 import HomeService from "../components/HomeService.astro";
+import Parallax from "../components/Parallax.astro";
+import Button from '@/components/ui/button'
+import TracingBeam from "../components/TracingBeam.astro";
 ---
 
 <PageLayout>
     <div class="-translate-y-16">
     <Hero/>
-    <div class="pt-96">
-        <div class="pt-4">
+    </div>
+    <div class="flex-col pt-[400px] pb-24 flex items-center">
+        <div class="lg:hidden py-10 md:w-1/2 leading-tight text-3xl font-bold text-center">
             <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
         </div>
-        <div>
-            <button>Contact Us</button>
+        <div class="py-8">
+            <Parallax />
+        </div>
+        <div class="gap-y-10 lg:w-2/3 flex flex-col lg:-ml-[1000px] lg:-px-96 px-36 py-8 items-center justify-center">
+            <div class="bg-purple-500 leading-tight md:hidden lg:flex w-1/2 text-3xl font-medium text-center">
+                <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
+            </div>
+            <div>
+                <Button>Contact Us</Button>
+            </div>
         </div>
     </div>
     <div class="bg-[#292929] py-16 px-24">
         <div>
-            <p class="font-bold text-lg text-center">Our Services</p>
+            <p class="font-bold text-2xl text-center">Our Services</p>
         </div>
         <div class="w-full pt-8 flex justify-center">
             <HomeService></HomeService>
         </div>
     </div>
     <div>
-        <Technologies></Technologies>
-    </div>
-    <div class="py-12 pb-32 px-24 bg-[#e6e6e6] text-black">
-        <div class="text-center">
-            <p class="font-bold text-lg">Why Elysseum?</p>
+        <div>
+            <p class="pt-16 font-bold text-2xl text-center">Technologies</p>
         </div>
         <div>
-            <WhyContent></WhyContent>
+            <Technologies></Technologies>
+        </div>
+    </div>
+    <div class="py-16 px-24 bg-[#e6e6e6] text-black">
+        <div class="text-center">
+            <p class="font-bold text-2xl">Why Elysseum?</p>
+        </div>
+        <div>
+            <TracingBeam />
         </div>
     </div>
     <div>

@@ -1,37 +1,26 @@
 import { imageConfig } from "astro:assets";
-import InfiniteMovingCards from "../ui/infinite-moving-cards";
+import InfiniteMovingImages from "../ui/infinite-moving-cards";
 import React from 'react';
 
-
-const logo = [
-  {
-    name: 'HHH'
-  },
-  {
-    name: 'III'
-  },
-  {
-    name: 'JJJ'
-  },
-  {
-    name: 'KKK'
-  },
-  {
-    name: 'LLL'
-  },
+const logoImages = [
+  'src/images/tech.svg',
+  'src/images/tech.svg',
+  'src/images/tech.svg',
+  'src/images/tech.svg',
+  'src/images/tech.svg',
 ];
 
-function Techno() {
-    return (
-      <div className="h-72 rounded-md flex flex-col antialiased items-center justify-center relative">
-        <InfiniteMovingCards
-          items={logo}
-          direction="left"
-          speed="normal"
-        />
-      </div>
-    );
-  }
-
+const Techno = () => {
+  return (
+    <div className="w-full overflow-hidden pt-6 pb-10 rounded-md flex flex-col antialiased items-center justify-center relative">
+      <InfiniteMovingImages
+        imagePaths={logoImages}
+        direction="left"
+        speed="fast"
+        class
+      />
+    </div>
+  );
+};
 
 export default Techno;

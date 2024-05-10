@@ -6,8 +6,8 @@ import Textarea from "@/components/ui/textarea"
 const {title, placeholder, type} = Astro.props;
 ---
 
-<div class="gap-4 flex flex-col">
-    <p class="text-base font-medium text-[#E6E6E6] text-left">{title}</p>
+<div class="gap-4 flex flex-col lg:flex-row lg:my-1">
+    <p class="text-base font-medium text-[#E6E6E6] text-left lg:w-24">{title}</p>
     {(() => {
         switch (type) {
             case "input":

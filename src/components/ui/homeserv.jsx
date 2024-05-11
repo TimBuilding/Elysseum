@@ -94,12 +94,6 @@ const SCarousel = forwardRef(
             };
         }, [api, onSelect]);
 
-        useEffect(() => {
-            if (api && dotsNodeRef.current) {
-                ReactDOM.render(<SCarouselDotIndicator emblaApi={api} dotsNode={dotsNodeRef.current} />, dotsNodeRef.current)
-            }
-        }, [api, dotsNodeRef]);
-
         return (
             <CarouselContext.Provider
                 value={{
@@ -123,7 +117,6 @@ const SCarousel = forwardRef(
                     {...props}
                 >
                     {children}
-                    <div ref={dotsNodeRef} className="embla__dots" />
                 </div>
             </CarouselContext.Provider>
         );
@@ -178,9 +171,9 @@ const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "
             variant={variant}
             size={size}
             className={cn(
-                "absolute h-8 w-8 rounded-full",
+                "h-8 w-8 xl:h-14 xl:w-14 rounded-full",
                 orientation === "horizontal"
-                    ? "left-48 top-60"
+                    ? ""
                     : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
                 className
             )}
@@ -203,9 +196,9 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             variant={variant}
             size={size}
             className={cn(
-                "absolute h-8 w-8 rounded-full",
+                "h-8 w-8 xl:w-14 xl:h-14 rounded-full",
                 orientation === "horizontal"
-                    ? "right-48 top-60"
+                    ? ""
                     : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
                 className
             )}
@@ -220,54 +213,4 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
 });
 SCarouselNext.displayName = "SCarouselNext";
 
-const SCarouselDotIndicator = ({ emblaApi, dotsNode }) => {
-    useEffect(() => {
-        if (!emblaApi || !dotsNode) return;
-
-        const addDotBtnsAndClickHandlers = () => {
-            dotsNode.innerHTML = emblaApi
-                .scrollSnapList()
-                .map(() => '<button class="embla__dot" type="button"></button>')
-                .join("");
-
-            const scrollTo = (index) => {
-                emblaApi.scrollTo(index);
-            };
-
-            const nodes = Array.from(dotsNode.querySelectorAll(".embla__dot"));
-
-            nodes.forEach((dotNode, index) => {
-                dotNode.addEventListener("click", () => scrollTo(index), false);
-            });
-        };
-
-        const toggleDotBtnsActive = () => {
-            const previous = emblaApi.previousScrollSnap();
-            const selected = emblaApi.selectedScrollSnap();
-            const nodes = Array.from(dotsNode.querySelectorAll(".embla__dot"));
-
-            nodes.forEach((dotNode, index) => {
-                if (index === previous) {
-                    dotNode.classList.remove("embla__dot--selected");
-                } else if (index === selected) {
-                    dotNode.classList.add("embla__dot--selected");
-                }
-            });
-        };
-
-        addDotBtnsAndClickHandlers();
-        emblaApi.on("reInit", addDotBtnsAndClickHandlers);
-        emblaApi.on("select", toggleDotBtnsActive);
-
-        return () => {
-            emblaApi.off("reInit", addDotBtnsAndClickHandlers);
-            emblaApi.off("select", toggleDotBtnsActive);
-        };
-    }, [emblaApi, dotsNode]);
-
-    return null;
-};
-SCarouselDotIndicator.displayName = "SCarouselDotIndicator";
-
-
-export { SCarousel, SCarouselContent, SCarouselItem, SCarouselPrevious, SCarouselNext, SCarouselDotIndicator };
+export { SCarousel, SCarouselContent, SCarouselItem, SCarouselPrevious, SCarouselNext, };

@@ -1,64 +1,69 @@
 ---
-import Technologies from "../components/Technologies.astro";
-import PageLayout from "../layouts/PageLayout.astro";
-import WhyContent from "../components/WhyContent.astro";
-import HomeCallToAction from "../components/HomeCallToAction.astro";
-import Hero from "../components/Hero.astro";
-import HomeService from "../components/HomeService.astro";
-import Parallax from "../components/Parallax.astro";
-import Button from '@/components/ui/button'
-import TracingBeam from "../components/TracingBeam.astro";
+import Technologies from '../components/Technologies.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import HomeCallToAction from '../components/HomeCallToAction.astro';
+import Hero from '../components/Hero.astro';
+import HomeService from '../components/HomeService.astro';
+import Parallax from '../components/Parallax.astro';
+import Button from '@/components/ui/button';
+import TracingBeam from '../components/TracingBeam.astro';
 ---
 
 <PageLayout>
-    <div class="-translate-y-16">
-    <Hero/>
+  <div class='-translate-y-16'>
+    <Hero />
+  </div>
+  <div
+    class='flex-col pb-24 flex items-center xl:flex-row-reverse xl:mx-24 xl:justify-center my-10'
+  >
+    <div
+      class='xl:hidden py-10 md:w-1/2 leading-tight text-3xl font-bold text-center'
+    >
+      <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
     </div>
-    <div class="flex-col pb-24 flex items-center xl:flex-row-reverse xl:mx-24 xl:justify-center">
-        <div class="xl:hidden py-10 md:w-1/2 leading-tight text-3xl font-bold text-center">
-            <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
-        </div>
-        <div class="py-8 xl:w-full xl:pr-24 xl:scale-110 2xl:scale-125">
-            <Parallax />
-        </div>
-        <div class="xl:w-full xl:flex xl:justify-center">
-            <div class="gap-y-10 flex flex-col px-36 py-8 items-center justify-center xl:w-3/4 xl:px-0">
-                <div class="leading-tight hidden xl:flex w-2/3 text-3xl font-medium text-center xl:text-4xl 2xl:text-5xl xl:w-full">
-                    <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
-                </div>
-                <div>
-                    <Button>Contact Us</Button>
-                </div>
-            </div>    
-        </div>
+    <div class='py-8 xl:w-full xl:pr-24 xl:scale-110 2xl:scale-125'>
+      <Parallax />
     </div>
-    <div class="bg-[#292929] py-16 px-24">
+    <div class='xl:w-full xl:flex xl:justify-center'>
+      <div
+        class='gap-y-10 flex flex-col px-36 py-8 items-center justify-center xl:w-3/4 xl:px-0'
+      >
+        <div
+          class='leading-tight hidden xl:flex w-2/3 text-3xl font-medium text-center xl:text-4xl 2xl:text-5xl xl:w-full'
+        >
+          <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
+        </div>
         <div>
-            <p class="font-bold text-2xl text-center">Our Services</p>
+            <Button>Contact Us</Button>
         </div>
-        <div class="w-full pt-8 flex justify-center">
-            <HomeService></HomeService>
-        </div>
+      </div>
+    </div>
+  </div>
+  <div class='py-16 px-24 my-10'>
+    <div>
+      <p class='font-bold text-2xl text-center'>Our Services</p>
+    </div>
+    <div class='w-full pt-8 flex justify-center'>
+      <HomeService />
+    </div>
+  </div>
+  <div class="my-10">
+    <div>
+      <p class='pt-16 font-bold text-2xl text-center'>Technologies</p>
     </div>
     <div>
-        <div>
-            <p class="pt-16 font-bold text-2xl text-center">Technologies</p>
-        </div>
-        <div>
-            <Technologies></Technologies>
-        </div>
+      <Technologies />
     </div>
-    <div class="py-16 px-24 bg-[#e6e6e6] text-black">
-        <div class="text-center">
-            <p class="font-bold text-2xl">Why Elysseum?</p>
-        </div>
-        <div>
-            <TracingBeam />
-        </div>
+  </div>
+  <div class='py-16 px-24 bg-black text-white my-10'>
+    <div class='text-center'>
+      <p class='font-bold text-2xl'>Why Elysseum?</p>
     </div>
     <div>
-        <HomeCallToAction></HomeCallToAction>
+      <TracingBeam />
     </div>
-    </div>
-
+  </div>
+  <div>
+    <HomeCallToAction />
+  </div>
 </PageLayout>

@@ -17,17 +17,7 @@ function TracingBeam() {
                                     {item.description1}
                                 </p>
                             </div>
-                            {/* <img
-                                src={item.image1}
-                                alt=""
-                                className="group-hover:scale-105 transition ease-in-out w-72 object-cover rounded-xl drop-shadow-lg"
-                            /> */}
                             <div className="w-96">
-                                {/* <img
-                                    src={item.image1}
-                                    alt=""
-                                    className="group-hover:scale-110 transition ease-in-out w-full object-cover rounded-xl drop-shadow-lg"
-                                /> */}
                                 {item.image1 && (
                                     <img
                                         src={item.image1}
@@ -39,7 +29,7 @@ function TracingBeam() {
                         </div>
                         <div className="flex flex-row w-full gap-x-5 mb-20 group">
                             <div className="w-96 group-hover:scale-110 transition ease-in-out">
-                                {item?.image2 && (
+                                {item.image2 && (
                                     <img
                                         src={item.image2}
                                         alt=""

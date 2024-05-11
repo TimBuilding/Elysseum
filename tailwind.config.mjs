@@ -22,7 +22,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                serif: ['"Inter"', 'serif'],
+                serif: ['"Raleway"'],
                 sans: ['"Jura"', 'sans'],
             },
             colors: {

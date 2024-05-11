@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, Front, Back } from "@/components/ui/card"
 import {
   SCarousel,
   SCarouselContent,
@@ -35,33 +35,65 @@ const SCarouselServices = () => {
   ]
 
   return (
-    <SCarousel
-      opts={{ loop: true, }}
-      className="w-full max-w-screen"
-    >
-      <SCarouselContent className="xl:-ml-1 md:-ml-4">
-        {serv.map((serv, index) => {
-          return (
-            <SCarouselItem key={index} className="flex flex-col items-center md:basis-1/3 lg:basis-1/4">
-              <div className="p-1 w-full h-full">
-                <Card className="h-full md:py-4 md:px-6">
-                  <CardContent className="flex flex-col h-full lg:aspect-video items-center justify-center p-6 pb-10">
-                    <div>
-                      <div className="md:px-0 lg:px-6">
-                        <p className="md:text-lg lg:text-4xl font-semibold text-center">{serv.title}</p>
+    <div className="">
+      {/* <SCarousel
+        opts={{ loop: true, }}
+        className="w-full max-w-6xl h-96 min-h-full"
+      >
+        <SCarouselContent className="xl:-ml-1 md:-ml-4">
+          {serv.map((serv, index) => {
+            return (
+              <SCarouselItem key={index} className="aspect-square flex flex-col items-center md:basis-1/3 lg:basis-1/3">
+                <div className="p-1 w-full h-full">
+                  <Card className="h-full md:py-4 md:px-6">
+                    <CardContent className="bg-red-500 flex flex-col h-full w-full max-w-2xl items-center justify-center p-6 pb-10">
+                      <div>
+                        <div className="md:px-0 lg:px-6 bg-red-200">
+                          <p className="w-full md:text-lg xl:text-3xl font-semibold text-center">{serv.title}</p>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </SCarouselItem>
-          );
-        })};
-      </SCarouselContent>
-      <SCarouselPrevious />
-      <SCarouselDotIndicator />
-      <SCarouselNext />
-    </SCarousel>
+                    </CardContent>
+                  </Card>
+                </div>
+              </SCarouselItem>
+            );
+          })};
+        </SCarouselContent>
+        <div className="py-10 space-x-56 flex justify-center">
+          <SCarouselPrevious />
+          <SCarouselNext />
+        </div>
+      </SCarousel> */}
+
+      <SCarousel
+        opts={{ loop: true, }}
+        className="w-full max-w-6xl h-96 min-h-full"
+      >
+        <SCarouselContent className="xl:-ml-1 md:-ml-4">
+          {serv.map((serv, index) => {
+            return (
+              <SCarouselItem key={index} className="flex flex-col items-center md:basis-1/3 lg:basis-1/3">
+                <div className="cursor-pointer transition-all duration-700 card w-full h-full">
+                  <Card className="bg-blue-500 relative h-full w-full md:py-4 md:px-6">
+                    <CardContent className="z-50 flex flex-col h-full w-full max-w-2xl items-center justify-center p-6 pb-10">
+                      <div>
+                        <div className="md:px-0 lg:px-6 bg-red-200">
+                          <p className="w-full md:text-lg xl:text-3xl font-semibold text-center">{serv.title}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </SCarouselItem>
+            );
+          })};
+        </SCarouselContent>
+        <div className="py-10 space-x-56 flex justify-center">
+          <SCarouselPrevious />
+          <SCarouselNext />
+        </div>
+      </SCarousel>
+    </div>
   )
 }
 

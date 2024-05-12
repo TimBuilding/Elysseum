@@ -27,7 +27,7 @@ const Front = React.forwardRef(
     <div
       ref={ref}
       className={cn(
-        "absolute rounded-lg border bg-red-500 text-card-foreground shadow-sm transition-all duration-100 delay-200 hover:opacity-0",
+        "absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0",
         className
       )}
       {...props}
@@ -41,11 +41,11 @@ const Back = React.forwardRef(
     <div
       ref={ref}
       className={cn(
-        "absolute bg-red-500 h-full w-full rounded-lg border bg-card text-card-foreground shadow-sm transition-all z-10 card-back",
+        "absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all z-10 card-back",
         className
       )}
       {...props}
-    />
+    >KKKK</div>
   )
 );
 Card.displayName = "Back";

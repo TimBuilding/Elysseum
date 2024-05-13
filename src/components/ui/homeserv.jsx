@@ -158,7 +158,7 @@ const SCarouselItem = forwardRef(({ className, ...props }, ref) => {
             )}
             {...props}
         />
-    );
+    )
 });
 SCarouselItem.displayName = "SCarouselItem";
 
@@ -181,10 +181,10 @@ const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "
             onClick={scrollPrev}
             {...props}
         >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-5 w-5" />
             <span className="sr-only">Previous slide</span>
         </Button>
-    );
+    )
 });
 SCarouselPrevious.displayName = "SCarouselPrevious";
 
@@ -206,10 +206,10 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             onClick={scrollNext}
             {...props}
         >
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-5 w-5" />
             <span className="sr-only">Next slide</span>
         </Button>
-    );
+    )
 });
 SCarouselNext.displayName = "SCarouselNext";
 

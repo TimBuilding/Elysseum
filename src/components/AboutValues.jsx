@@ -100,7 +100,7 @@ const AboutValues = () => {
     <div className="space-y-20 max-w-xl xl:space-y-0 xl:grid grid-cols-2 xl:gap-10 mx-24 mb-10 xl:max-w-5xl">
       {values.map((value, index) => (
         <div key={`content-${index}`}>
-          <Card className="h-full rounded-xl bg-transparent border-white-500 border-4 border-solid">
+          <Card className="h-full rounded-xl bg-transparent border-white border-4 border-solid">
             <CardContent className="flex flex-col items-center justify-center p-8 pb-10">
               <div>
                 <img

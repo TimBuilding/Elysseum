@@ -66,30 +66,25 @@ const InfiniteMovingImages = ({
     <div
       ref={containerRef}
       className={cn(
-        "h-48 scroller relative z-20 lg:w-full xl:max-w-8xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "items-center h-full flex min-w-full shrink-0 gap-6 w-max flex-nowrap",
-          start && "animate-scroll",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {imagePaths.map((path, idx) => (
-          <li
-            className="max-w-full flex-shrink-0"
+          <img
+            className="w-[200px] xl:w-[250px] max-w-full relative flex-shrink-0 border-slate-700 px-8 py-6"
             key={idx}
-            style={{ marginRight: "4px" }}
+            src={path}
           >
-            <img
-              src={path}
-              className="h-40"
-              alt={`Image ${idx + 1}`}
-            />
-          </li>
+          </img>
         ))}
       </ul>
     </div>

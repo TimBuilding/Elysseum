@@ -41,17 +41,20 @@ export const StickyScroll = ({ content, contentClassName }) => {
   return (
     <>
       <p className='mx-24 mb-10 lg:mb-20 text-center opacity-1 sticky lg:relative block bg-black text-5xl lg:text-6xl font-bold text-[#664B93] '>What We Offer</p>
-      <motion.div
-        animate={{
-          background: linearGradients[activeCard % linearGradients.length],
-        }}
-        className={cn(
-          'block mx-56 lg:mx-0 lg:hidden flex flex-row justify-center bg-red-500 h-80 max-h-2xl lg:max-w-xl mb-20 rounded-md bg-white overflow-hidden',
-          contentClassName
-        )}
-      >
-        {content[activeCard].content ?? null}
-      </motion.div>
+      <div className='flex flex-row justify-center'>
+        <motion.div
+          animate={{
+            background: linearGradients[activeCard % linearGradients.length],
+          }}
+          className={cn(
+            'block w-96 mx-24 lg:hidden bg-red-500 h-72 max-h-2xl mb-20 rounded-md bg-white overflow-hidden',
+            contentClassName
+          )}
+        >
+          {content[activeCard].content ?? null}
+        </motion.div>
+
+      </div>
       <motion.div
         animate={{
           backgroundColor: backgroundColors[activeCard % backgroundColors.length],
@@ -63,7 +66,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
           <div className='max-w-xl'>
             {content.map((item, index) => (
               <>
-                <div key={item.title + index} className='flex flex-col justify-center my-0 lg:my-16 h-96'>
+                <div key={item.title + index} className='flex flex-col justify-center my-16 md:my-0 lg:my-16 h-96'>
                   <motion.h2
                     initial={{
                       opacity: 0,

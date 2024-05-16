@@ -49,28 +49,28 @@ const SCarouselServices = () => {
   ]
 
   return (
-    <div className="">
+    <div>
       <SCarousel
         opts={{ loop: true, }}
-        className="w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl h-96 min-h-full"
+        className=" xl:mb-32 sm:w-96 md:w-full lg:w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl h-96 min-h-full"
       >
-        <SCarouselContent className="xl:-ml-1 md:-ml-4">
+        <SCarouselContent className="mt-10 md:mt-0 md:ml-2 lg:ml-4">
           {serv.map((serv, index) => {
             return (
-              <SCarouselItem key={index} className="aspect-square flex flex-col items-center lg:basis-1/3">
-                <div className="p-1 w-full h-full max-w-lg">
-                  <div className="relative w-full lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
+              <SCarouselItem key={index} className="aspect-square flex flex-col items-center md:basis-1/3">
+                <div className="p-1 w-full h-full max-w-xl lg:max-w-lg">
+                  <div className="relative w-full sm:w-48 lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
                     <div className="border-white border-4 rounded-xl absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all duration-100 delay-200 z-20 hover:opacity-0">
                       <CardContent className="rounded-xl flex flex-col h-full w-full max-w-2xl items-center justify-center p-10">
                         <div>
-                          <p className="w-full text-xl md:text-2xl xl:text-3xl font-semibold text-center">{serv.title}</p>
+                          <p className="w-full text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-center">{serv.title}</p>
                         </div>
                       </CardContent>
                     </div>
                     <div className="border-white border-4 rounded-xl absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all z-10 card-back">
                       <CardContent className="rounded-xl bg-gradient-to-b from-black from-60% to-white/20 flex flex-col h-full w-full max-w-2xl items-center justify-center p-8 xl:p-10">
                         <div>
-                          <p className="w-full text-lg xl:text-2xl font-semibold text-center">{serv.desc}</p>
+                          <p className="w-full text-lg md:text-xs lg:text-xl xl:text-2xl font-semibold text-center">{serv.desc}</p>
                         </div>
                       </CardContent>
                     </div>
@@ -82,7 +82,7 @@ const SCarouselServices = () => {
         </SCarouselContent>
         <div className="py-10 space-x-32 flex justify-center">
           <SCarouselPrevious />
-          <DotsComponent></DotsComponent>
+          {/* <DotsComponent client:load className="bg-purple-500" /> */}
           {/* <div>
             <DotsComponent className="bg-red-500"></DotsComponent>
           </div> */}

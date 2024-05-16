@@ -64,7 +64,7 @@ function TracingBeam() {
                 <div className="max-w-4xl antialiased pt-4 relative">
                     {dummyContent.map((item, index) => (
                         <div key={`content-${index}`}>
-                            <div className="relative flex flex-col items-center md:items-left md:flex-row w-full gap-x-5 -mb-16 md:-mb-5 space-y-10 md:space-y-0 group">
+                            <div className="relative flex flex-col items-center md:items-left md:flex-row w-full gap-x-5 -mb-16 md:-mb-8 space-y-10 md:space-y-0 group">
                                 <div className="w-96 md:hidden">
                                     {item.image1 && (
                                         <img
@@ -74,7 +74,7 @@ function TracingBeam() {
                                         />
                                     )}
                                 </div>
-                                <div className="bg-red-500 pr-0 md:pr-8 gap-y-5 md:gap-y-0 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pr-0 md:pr-8 gap-y-5 md:gap-y-0 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title1}
                                     </p>
@@ -102,7 +102,7 @@ function TracingBeam() {
                                         />
                                     )}
                                 </div>
-                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title2}
                                     </p>

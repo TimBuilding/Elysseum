@@ -7,7 +7,7 @@ const {title, placeholder, type} = Astro.props;
 ---
 
 <div class="gap-4 flex flex-col lg:flex-row lg:my-1">
-    <p class="w-1/4 text-base font-medium text-[#E6E6E6] text-left xl:text-xl">{title}</p>
+    <p class="w-1/4 text-base font-medium text-[#E6E6E6] text-left lg:text-xl">{title}</p>
     {(() => {
         switch (type) {
             case "input":

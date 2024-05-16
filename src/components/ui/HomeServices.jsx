@@ -59,9 +59,9 @@ const SCarouselServices = () => {
             return (
               <SCarouselItem key={index} className="aspect-square flex flex-col items-center lg:basis-1/3">
                 <div className="p-1 w-full h-full max-w-lg">
-                  <div className="relative w-full lg:w-64 xl:w-80 h-full rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
+                  <div className="relative w-full lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
                     <div className="border-white border-4 rounded-xl absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all duration-100 delay-200 z-20 hover:opacity-0">
-                      <CardContent className="flex flex-col h-full w-full max-w-2xl items-center justify-center p-10">
+                      <CardContent className="rounded-xl flex flex-col h-full w-full max-w-2xl items-center justify-center p-10">
                         <div>
                           <p className="w-full text-xl md:text-2xl xl:text-3xl font-semibold text-center">{serv.title}</p>
                         </div>

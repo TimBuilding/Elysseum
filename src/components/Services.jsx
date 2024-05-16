@@ -81,7 +81,7 @@ const content = [
 
 const Services = () => {
   return (
-    <div className={'py-20 w-full relative'}>
+    <div className={'py-10 w-full relative'}>
       <StickyScroll content={content} />
     </div>
   );

@@ -4,52 +4,118 @@ import Beam from "@/components/ui/beam";
 
 function TracingBeam() {
     return (
-        <Beam className="px-6 pt-10 pb-6">
-            <div className="max-w-4xl antialiased pt-4 relative">
-                {dummyContent.map((item, index) => (
-                    <div key={`content-${index}`}>
-                        <div className="relative flex flex-row w-full gap-x-5 -mb-5 group">
-                            <div className="pr-8 gap-y-5 w-2/3 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
-                                <p className={twMerge("text-xl font-medium")}>
-                                    {item.title1}
-                                </p>
-                                <p className="text-md">
-                                    {item.description1}
-                                </p>
+        <>
+            <div className="px-6 pt-10 pb-6 md:hidden">
+                <div className="max-w-4xl antialiased pt-4 relative">
+                    {dummyContent.map((item, index) => (
+                        <div key={`content-${index}`}>
+                            <div className="relative flex flex-col items-center md:items-left md:flex-row w-full gap-x-5 -mb-16 md:-mb-5 space-y-10 md:space-y-0 group">
+                                <div className="w-96 md:hidden">
+                                    {item.image1 && (
+                                        <img
+                                            src={item.image1}
+                                            alt=""
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
+                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                    <p className={twMerge("text-xl font-medium")}>
+                                        {item.title1}
+                                    </p>
+                                    <p className="text-md">
+                                        {item.description1}
+                                    </p>
+                                </div>
+                                <div className="w-96 hidden md:flex">
+                                    {item.image1 && (
+                                        <img
+                                            src={item.image1}
+                                            alt=""
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
                             </div>
-                            <div className="w-96">
-                                {item.image1 && (
-                                    <img
-                                        src={item.image1}
-                                        alt=""
-                                        className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
-                                    />
-                                )}
+                            <div className="flex-col flex items-center md:items-left md:flex-row w-full gap-x-0 md:gap-x-5 mb-16 space-y-10 md:mb-20 group">
+                                <div className="w-96 group-hover:scale-110 transition ease-in-out">
+                                    {item.image2 && (
+                                        <img
+                                            src={item.image2}
+                                            alt=""
+                                            className="h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
+                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                    <p className={twMerge("text-xl font-medium")}>
+                                        {item.title2}
+                                    </p>
+                                    <p className="text-md">
+                                        {item.description2}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="flex flex-row w-full gap-x-5 mb-20 group">
-                            <div className="w-96 group-hover:scale-110 transition ease-in-out">
-                                {item.image2 && (
-                                    <img
-                                        src={item.image2}
-                                        alt=""
-                                        className="h-48 w-full object-cover rounded-xl drop-shadow-lg"
-                                    />
-                                )}
-                            </div>
-                            <div className="pl-8 gap-y-5 w-2/3 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
-                                <p className={twMerge("text-xl font-medium")}>
-                                    {item.title2}
-                                </p>
-                                <p className="text-md">
-                                    {item.description2}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </Beam>
+            <Beam className="px-6 pt-10 pb-6 hidden md:block">
+                <div className="max-w-4xl antialiased pt-4 relative">
+                    {dummyContent.map((item, index) => (
+                        <div key={`content-${index}`}>
+                            <div className="relative flex flex-col items-center md:items-left md:flex-row w-full gap-x-5 -mb-16 md:-mb-5 space-y-10 md:space-y-0 group">
+                                <div className="w-96 md:hidden">
+                                    {item.image1 && (
+                                        <img
+                                            src={item.image1}
+                                            alt=""
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
+                                <div className="bg-red-500 pr-0 md:pr-8 gap-y-5 md:gap-y-0 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                    <p className={twMerge("text-xl font-medium")}>
+                                        {item.title1}
+                                    </p>
+                                    <p className="text-md">
+                                        {item.description1}
+                                    </p>
+                                </div>
+                                <div className="w-96 hidden md:flex">
+                                    {item.image1 && (
+                                        <img
+                                            src={item.image1}
+                                            alt=""
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                            <div className="flex-col flex items-center md:items-left md:flex-row w-full gap-x-0 md:gap-x-5 mb-16 space-y-10 md:mb-20 group">
+                                <div className="w-96 group-hover:scale-110 transition ease-in-out">
+                                    {item.image2 && (
+                                        <img
+                                            src={item.image2}
+                                            alt=""
+                                            className="h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                        />
+                                    )}
+                                </div>
+                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                    <p className={twMerge("text-xl font-medium")}>
+                                        {item.title2}
+                                    </p>
+                                    <p className="text-md">
+                                        {item.description2}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </Beam>
+        </>
     );
 }
 

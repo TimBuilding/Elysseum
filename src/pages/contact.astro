@@ -30,68 +30,40 @@ const contacts: ContactFormProps[] = [
     type: 'textarea',
   },
 ];
-//   {
-//     title: 'Name*:',
-//     placeholder: 'Name',
-//     type: 'input',
-//   },
-//   {
-//     title: 'Email:',
-//     placeholder: 'Email',
-//     type: 'input',
-//   },
-//   {
-//     title: 'Phone*:',
-//     placeholder: 'Phone',
-//     type: 'input',
-//   },
-//   {
-//     title: 'Company:',
-//     placeholder: 'Company Name',
-//     type: 'input',
-//   },
-//   {
-//     title: 'Message:',
-//     placeholder: 'Message',
-//     type: 'textarea',
-//   },
-// ];
 ---
 
 <div>
   <PageLayout>
-    <div class='pt-4 flex flex-row'>
-      <div
-        class='-translate-y-20 -mb-20 w-full relative h-[850px] lg:h-[700px] overflow-hidden bg-cover'
-        style="background-image:url('/src/images/Contact.jpg');"
-      >
-        <div
-          class='absolute w-full inset-0 bg-gradient-to-l from-black from-2%'
-        >
-        </div>
-      </div>
-      <div class='h-full w-3/4 mr-24 flex flex-row justify-end'>
-        <div class='flex flex-col pt-10 w-full'>
-          <p class='lg:ml-20 font-bold text-3xl text-center pb-[60px]'>
-            Contact Us
-          </p>
-          <div class='flex flex-col gap-4 w-full'>
-            {
-              contacts.map(({ title, placeholder, type }) => (
-                <ContactForm
-                  title={title}
-                  placeholder={placeholder}
-                  type={type}
-                />
-              ))
-            }
-          </div>
-          <div class='lg:ml-20 pt-10 justify-center flex'>
-            <Button type='submit' variant='default'>Contact Us</Button>
+    <div
+      class='relative -translate-y-16 -mb-16 flex h-full w-full justify-center bg-cover'
+      style="background-image:url('/src/images/Contact.jpg');"
+    >
+      <div class='absolute bg-black bg-opacity-70 z-5 h-full w-full'></div>
+      <div class='w-full inset-0 bg-gradient-to-t from-black from-2%'>
+        <div class='w-full flex justify-center z-10 h-full backdrop-blur-3xl'>
+          <div class='flex flex-col py-20 w-1/2 items-center mt-20'>
+            <p
+              class='lg:ml-20 xl:ml-40 font-bold text-3xl lg:text-5xl text-center pb-8 xl:pb-10'
+            >
+              Contact Us
+            </p>
+            <div class='flex flex-col gap-4 w-full'>
+              {
+                contacts.map(({ title, placeholder, type }) => (
+                  <ContactForm
+                    title={title}
+                    placeholder={placeholder}
+                    type={type}
+                  />
+                ))
+              }
+            </div>
+            <div class='lg:ml-20 pt-10 justify-center flex'>
+              <Button type='submit' variant='default'>Contact Us</Button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </PageLayout>
 </div>
-

@@ -82,7 +82,7 @@ const SCarouselServices = () => {
         </SCarouselContent>
         <div className="py-10 space-x-12 flex justify-center items-center">
           <SCarouselPrevious />
-          <DotNavigator />
+          <DotNavigator client:load/>
           <SCarouselNext />
         </div>
       </SCarousel>

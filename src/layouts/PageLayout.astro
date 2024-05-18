@@ -1,6 +1,6 @@
 ---
 import '../styles/globals.css';
-import Navigation from '../components/Navigation.astro';
+import Navigation from '../components/ui/Navigation';
 import Map from '../components/Map.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -22,7 +22,7 @@ import Footer from '../components/Footer.astro';
     class='bg-black text-white font-serif flex flex-col justify-between min-h-screen'
   >
     <div class='flex flex-col'>
-      <Navigation />
+      <Navigation client:load />
       <main class="'flex flex-col">
         <slot />
       </main>

@@ -163,7 +163,7 @@ const SCarouselItem = forwardRef(({ className, ...props }, ref) => {
 SCarouselItem.displayName = "SCarouselItem";
 
 const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-    const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+    const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
     return (
         <Button
@@ -190,6 +190,9 @@ SCarouselPrevious.displayName = "SCarouselPrevious";
 
 const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
     const { orientation, scrollNext, canScrollNext } = useCarousel();
+    const { activeSlide, api } = useCarousel();
+    const [numberOfSlides, setNumberOfSlides] = useState(0);
+
     return (
         <Button
             ref={ref}
@@ -214,9 +217,10 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
 SCarouselNext.displayName = "SCarouselNext";
 
 const DotNavigator = () => {
-    const { activeSlide, api } = useCarousel();
+    const { api } = useCarousel(); 
     const [numberOfSlides, setNumberOfSlides] = useState(0);
-
+    const [activeSlide, setActiveSlide] = useState(0);
+    
     useEffect(() => {
         if (api) {
             const slides = api.slideNodes();
@@ -254,5 +258,49 @@ const DotNavigator = () => {
         </div>
     );
 };
+
+
+
+// const DotNavigator = () => {
+//     const { activeSlide, api } = useCarousel();
+//     const [numberOfSlides, setNumberOfSlides] = useState(0);
+
+//     useEffect(() => {
+//         if (api) {
+//             const slides = api.slideNodes();
+//             setNumberOfSlides(slides.length);
+
+//             const updateActiveDot = () => {
+//                 const currentIndex = api.selectedScrollSnap();
+//                 setActiveSlide(currentIndex);
+//             };
+
+//             api.on("select", updateActiveDot);
+
+//             return () => {
+//                 api.off("select", updateActiveDot);
+//             };
+//         }
+//     }, [api]);
+
+//     const handleDotClick = useCallback((index) => {
+//         api?.scrollTo(index);
+//     }, [api]);
+
+//     return (
+//         <div className="py-1 space-x-2 flex justify-center">
+//             {Array.from({ length: numberOfSlides }).map((_, index) => (
+//                 <button
+//                     key={index}
+//                     onClick={() => handleDotClick(index)}
+//                     className={cn(
+//                         "h-2 w-2 xl:h-4 xl:w-4 rounded-full border border-gray-400 transition-all duration-200 ease-in-out hover:border-purple-400 hover:bg-purple-200 focus:border-purple-700 focus:bg-purple-500",
+//                         index === activeSlide ? "bg-purple-500" : "bg-white"
+//                     )}
+//                 ></button>
+//             ))}
+//         </div>
+//     );
+// };
 
 export { SCarousel, SCarouselContent, SCarouselItem, SCarouselPrevious, SCarouselNext, DotNavigator };

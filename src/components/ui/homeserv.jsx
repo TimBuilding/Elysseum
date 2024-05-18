@@ -171,7 +171,7 @@ const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "
             variant={variant}
             size={size}
             className={cn(
-                "h-8 w-8 xl:h-14 xl:w-14 rounded-full",
+                "h-8 w-8 xl:h-14 xl:w-14 rounded-full hover:bg-[#664b93] hover:border-[#664b93]",
                 orientation === "horizontal"
                     ? ""
                     : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -199,7 +199,7 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             variant={variant}
             size={size}
             className={cn(
-                "h-8 w-8 xl:w-14 xl:h-14 rounded-full",
+                "h-8 w-8 xl:w-14 xl:h-14 rounded-full hover:bg-[#664b93] hover:border-[#664b93]",
                 orientation === "horizontal"
                     ? ""
                     : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -209,7 +209,7 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             onClick={scrollNext}
             {...props}
         >
-            <ArrowRight className="h-5 w-5" />
+            <ArrowRight className="h-5 w-5"/>
             <span className="sr-only">Next slide</span>
         </Button>
     )
@@ -251,7 +251,7 @@ const DotNavigator = () => {
                     onClick={() => handleDotClick(index)}
                     className={cn(
                         "h-2 w-2 xl:h-4 xl:w-4 rounded-full border transition-all duration-200 ease-in-out hover:border-purple-400 hover:bg-purple-200 focus:border-purple-700 focus:bg-purple-500",
-                        index === activeSlide ? "bg-purple-500 border-purple-700" : "bg-white border-gray-400"
+                        index === activeSlide ? "bg-[#664b93] border-[#3f3059]" : "bg-white border-gray-400"
                     )}
                 ></button>
             ))}

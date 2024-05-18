@@ -10,7 +10,7 @@ import TracingBeam from '../components/TracingBeam.astro';
 ---
 
 <PageLayout>
-  <div class='-translate-y-16'>
+  <div class='-translate-y-16 mb-60 sm:mb-0'>
     <Hero />
   </div>
   <div
@@ -34,7 +34,7 @@ import TracingBeam from '../components/TracingBeam.astro';
           <p>Creating Customized IT Solutions to Meet Your Unique Needs</p>
         </div>
         <div>
-            <Button>Contact Us</Button>
+            <Button a="/src/pages/contact">Contact Us</Button>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ import TracingBeam from '../components/TracingBeam.astro';
       <p class='font-bold text-2xl xl:text-3xl text-center'>Our Services</p>
     </div>
     <div class='w-full md:pt-8 flex justify-center'>
-      <HomeService></HomeService>
+      <HomeService client:load></HomeService>
     </div>
   </div>
   <div class="my-10">

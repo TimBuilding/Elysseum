@@ -1,12 +1,12 @@
 import * as React from "react"
 import { CardContent } from "@/components/ui/card"
-import DotsComponent from '@/components/ui/dots'
 import {
   SCarousel,
   SCarouselContent,
   SCarouselItem,
   SCarouselNext,
   SCarouselPrevious,
+  DotNavigator
 } from "@/components/ui/homeserv"
 
 const SCarouselServices = () => {
@@ -52,14 +52,14 @@ const SCarouselServices = () => {
     <div>
       <SCarousel
         opts={{ loop: true, }}
-        className=" xl:mb-32 sm:w-96 md:w-full lg:w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl h-96 min-h-full"
+        className=" xl:mb-32 sm:w-80 md:w-full lg:w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl h-96 min-h-full"
       >
-        <SCarouselContent className="mt-10 md:mt-0 md:ml-2 lg:ml-4">
+        <SCarouselContent className="mt-10 md:mt-0 md:ml-0 lg:ml-4">
           {serv.map((serv, index) => {
             return (
               <SCarouselItem key={index} className="aspect-square flex flex-col items-center md:basis-1/3">
-                <div className="p-1 w-full h-full max-w-xl lg:max-w-lg">
-                  <div className="relative w-full sm:w-48 lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
+                <div className="p-1 w-full h-full max-w-sm lg:max-w-lg">
+                  <div className="relative w-full md:w-48 lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
                     <div className="border-white border-4 rounded-xl absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all duration-100 delay-200 z-20 hover:opacity-0">
                       <CardContent className="rounded-xl flex flex-col h-full w-full max-w-2xl items-center justify-center p-10">
                         <div>
@@ -80,12 +80,9 @@ const SCarouselServices = () => {
             )
           })}
         </SCarouselContent>
-        <div className="py-10 space-x-32 flex justify-center">
+        <div className="py-10 space-x-12 flex justify-center items-center">
           <SCarouselPrevious />
-          {/* <DotsComponent client:load className="bg-purple-500" /> */}
-          {/* <div>
-            <DotsComponent className="bg-red-500"></DotsComponent>
-          </div> */}
+          <DotNavigator />
           <SCarouselNext />
         </div>
       </SCarousel>

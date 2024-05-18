@@ -10,7 +10,7 @@ function TracingBeam() {
                     {dummyContent.map((item, index) => (
                         <div key={`content-${index}`}>
                             <div className="relative flex flex-col items-center md:items-left md:flex-row w-full gap-x-5 -mb-16 md:-mb-5 space-y-10 md:space-y-0 group">
-                                <div className="w-96 md:hidden">
+                                <div className="w-80 sm:w-96 md:hidden">
                                     {item.image1 && (
                                         <img
                                             src={item.image1}
@@ -38,7 +38,7 @@ function TracingBeam() {
                                 </div>
                             </div>
                             <div className="flex-col flex items-center md:items-left md:flex-row w-full gap-x-0 md:gap-x-5 mb-16 space-y-10 md:mb-20 group">
-                                <div className="w-96 group-hover:scale-110 transition ease-in-out">
+                                <div className="w-80 sm:w-96 group-hover:scale-110 transition ease-in-out">
                                     {item.image2 && (
                                         <img
                                             src={item.image2}

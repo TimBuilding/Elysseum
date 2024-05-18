@@ -1,40 +1,62 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
-import Mission from "../components/Mission.astro";
-import CallToAction from "../components/CallToAction.astro";
-import AboutValues from "../components/AboutValues.jsx";
+import PageLayout from '../layouts/PageLayout.astro';
+import Mission from '../components/Mission.astro';
+import CallToAction from '../components/CallToAction.astro';
+import AboutValues from '../components/AboutValues.jsx';
 ---
+
 <PageLayout>
-    <div class="xl:flex xl:flex-row">
-        <section class="xl:flex xl:flex-row xl:max-w-4xl xl:w-full xl:pl-24">
-            <div class="flex-col mt-2 flex items-center">
-                <div class="flex justify-center relative mt-16 pt-20 text-3xl z-10 xl:text-5xl xl:-mb-3 font-bold">
-                    <span>About Us</span>
-                </div>
-                <img src="/src/images/Logo.png" alt="Logo Background" class="absolute opacity-20 max-w-3xl">
-                <img src="/src/images/LogoWhite.svg" alt="Elysseum Logo" class="relative max-w-2xl -translate-y-14"/>
-            </div>
-        </section>
-        <section>
-            <div class="flex justify-center text-center w-full -translate-y-12 xl:items-center xl:justify-start xl:text-start xl:translate-y-0 xl:h-full">
-                <span class="max-w-4xl text-xl px-32 font-medium xl:text-3xl xl:pl-10 xl:leading-snug">Founded on April 26, 2023, Elysseum is a leading provider of cutting-edge IT solutions and consulting services. With solid commitment to excellence, we empower businesses to thrive in the digital age by leveraging technology to its fullest potential.</span>
-            </div>
-        </section>
-    
-    </div>
-    <section class="my-20 flex flex-col items-center ">
-        <Mission></Mission>
-    </section>
-    <section class="my-20">
-        <div class="w-full flex justify-center">
-            <span class="font-bold text-center text-2xl xl:text-3xl">Our Values</span>
+  <div class='xl:flex xl:flex-row'>
+    <section class='xl:flex xl:flex-row xl:max-w-4xl xl:w-full xl:pl-24'>
+      <div class='flex-col mt-2 flex items-center'>
+        <div
+          class='flex justify-center relative mt-16 pt-20 text-3xl z-10 xl:text-5xl xl:-mb-3 font-bold'
+        >
+          <span>About Us</span>
         </div>
-        <div class="pt-8 flex justify-center grid-rows-2">
-            <AboutValues />
-        </div>
+        <img
+          src='/src/images/bigLogo.svg'
+          alt='Logo Background'
+          class='visible md:hidden -translate-y-6 sm:-translate-y-[105px] absolute sm:w-[550px] sm:max-w-3xl'
+        />
+        <img
+          src='/src/images/Logo.png'
+          alt='Logo Background'
+          class='hidden md:block absolute opacity-20 max-w-3xl'
+        />
+        <img
+          src='/src/images/LogoWhite.svg'
+          alt='Elysseum Logo'
+          class='relative max-w-md sm:max-w-xl md:max-w-2xl -translate-y-14'
+        />
+      </div>
     </section>
     <section>
-        <CallToAction></CallToAction>
+      <div
+        class='flex justify-center text-center w-full -translate-y-12 xl:items-center xl:justify-start xl:text-start xl:translate-y-0 xl:h-full'
+      >
+        <span
+          class='max-w-4xl text-xl px-10 px-32 font-medium xl:text-3xl xl:pl-10 xl:leading-snug'
+          >Founded on April 26, 2023, Elysseum is a leading provider of
+          cutting-edge IT solutions and consulting services. With solid
+          commitment to excellence, we empower businesses to thrive in the
+          digital age by leveraging technology to its fullest potential.</span
+        >
+      </div>
     </section>
+  </div>
+  <section class='my-20 flex flex-col items-center'>
+    <Mission />
+  </section>
+  <section class='my-20'>
+    <div class='w-full flex justify-center'>
+      <span class='font-bold text-center text-2xl xl:text-3xl'>Our Values</span>
+    </div>
+    <div class='pt-8 flex justify-center grid-rows-2'>
+      <AboutValues />
+    </div>
+  </section>
+  <section>
+    <CallToAction />
+  </section>
 </PageLayout>
-

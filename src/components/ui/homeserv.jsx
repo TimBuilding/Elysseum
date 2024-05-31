@@ -250,7 +250,7 @@ const DotNavigator = () => {
                     key={index}
                     onClick={() => handleDotClick(index)}
                     className={cn(
-                        "h-2 w-2 xl:h-4 xl:w-4 rounded-full border transition-all duration-200 ease-in-out hover:border-purple-400 hover:bg-purple-200 focus:border-purple-700 focus:bg-purple-500",
+                        "h-2 w-2 xl:h-4 xl:w-4 rounded-full border transition-all duration-200 ease-in-out hover:border-[#3f3059] hover:bg-[#664b93] focus:border-[#3f3059] focus:bg-[#664b93]",
                         index === activeSlide ? "bg-[#664b93] border-[#3f3059]" : "bg-white border-gray-400"
                     )}
                 ></button>

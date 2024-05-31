@@ -15,7 +15,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -32,7 +32,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -43,7 +43,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image2}
                                             alt=""
-                                            className="h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -70,11 +70,11 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
-                                <div className="pr-0 md:pr-8 gap-y-5 md:gap-y-0 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title1}
                                     </p>
@@ -87,7 +87,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -98,11 +98,11 @@ function TracingBeam() {
                                         <img
                                             src={item.image2}
                                             alt=""
-                                            className="h-48 w-full object-cover rounded-xl drop-shadow-lg"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
-                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pl-0 md:pl-8 gap-y-5 md:-translate-y-6 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title2}
                                     </p>

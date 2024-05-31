@@ -76,4 +76,11 @@
         transform: rotateY(180deg);
     }
 
+    .card {
+        border-image: radial-gradient(gray, black) 1 round;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+    }
+
 }

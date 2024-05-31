@@ -20,7 +20,22 @@ function ObjectParallax() {
         <div ref={ref} className="w-full h-80 max-h-2xl relative flex justify-center">
             <motion.div className="-translate-x-28 z-10 translate-y-5">
                 <motion.svg style={{ x: Right1X }} className="absolute z-10 w-50" height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="50" cx="50" cy="50" fill="rgb(102,75,147)" />
+                    <g filter="url(#filter0_i_4721_80)">
+                        <circle cx="50" cy="50" r="50" fill="#664B93" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_i_4721_80" x="0" y="0" width="166" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feMorphology radius="10" operator="erode" in="SourceAlpha" result="effect1_innerShadow_4721_80" />
+                            <feOffset dx="16" />
+                            <feGaussianBlur stdDeviation="11.9" />
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.265625 0 0 0 0 0.185 0 0 0 0 0.4 0 0 0 1 0" />
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_4721_80" />
+                        </filter>
+                    </defs>
                 </motion.svg>
             </motion.div>
             <motion.div className="-translate-x-20 z-10 translate-y-64">

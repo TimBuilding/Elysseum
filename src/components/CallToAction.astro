@@ -8,17 +8,19 @@ import Button from '../components/ui/button'
   style="background-image: url('/src/images/Call-to-action.jpg')"
 >
   <div class='absolute bg-black bg-opacity-70 z-5 h-full w-full'></div>
-  <div class='flex justify-center w-full h-full backdrop-blur-3xl'>
+  <div class='absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10'></div>
+  <div class='absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10'></div>
+  <div class='flex justify-center w-full h-full backdrop-blur-3xl py-16'>
     <div class='py-20 px-24 gap-y-10 items-center w-full lg:flex lg:flex-col lg:justify-center'>
         <p class='font-bold text-3xl sm:text-4xl xl:text-6xl mb-6 lg:mb-0'>Get in Touch</p>
         <span
-          class='text-justify leading-8 text-lg sm:text-2xl lg:leading-8'
+          class='text-justify leading-8 text-lg lg:leading-8'
           >Whether you are a small startup or an established enterprise,
-          Elysseum supports your digital transformation journey. partner with us
+          Elysseum supports your digital transformation journey. Partner with us
           to unlock technology's full potential and achieve sustainable growth
           in today's dynamic business landscape.</span
         >
-      <div class='flex flex-row justify-center z-10 mt-10 lg:mt-0'>
+      <div class='flex flex-row justify-center z-20 mt-10 lg:mt-0'>
         <a href="/contact"><Button>Contact Us</Button></a>
       </div>
     </div>

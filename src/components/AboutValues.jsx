@@ -64,22 +64,6 @@ const AboutValues = () => {
               </div>
             </div>
           </div>
-          {/* <Card className="h-full rounded-xl bg-transparent border-white border-4 border-solid">
-            <CardContent className="flex flex-col items-center justify-center p-8 pb-10">
-              <div>
-                <img
-                  src={value.path}
-                  alt={value.alt}
-                  className="h-full w-full object-cover mb-8 "
-                />
-                <div className="px-2 sm:px-6 text-white">
-                  <p className="text-xl sm:text-4xl font-semibold text-purple-600">{value.title}</p>
-                  <p className="my-4 text-sm sm:text-xl font-medium">{value.subtitle}</p>
-                  <p className="text-xs sm:text-lg text-justify leading-6">{value.text}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card> */}
         </div>
       ))}
     </div>

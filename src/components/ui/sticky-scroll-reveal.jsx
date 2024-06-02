@@ -27,27 +27,13 @@ export const StickyScroll = ({ content, contentClassName }) => {
     );
     setActiveCard(closestBreakpointIndex);
   });
-
-  const backgroundColors = [
-    // 'var(--slate-900)',
-    'var(--black)',
-    // 'var(--neutral-900)',
-  ];
-  const linearGradients = [
-    'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
-    'linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))',
-    'linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))',
-  ];
   return (
     <>
       <p className='mx-24 mb-10 lg:mb-20 text-center opacity-1 sticky lg:relative block text-5xl lg:text-6xl font-bold text-[#664B93] '>What We Offer</p>
       <div className='flex flex-row justify-center'>
         <motion.div
-          animate={{
-            background: linearGradients[activeCard % linearGradients.length],
-          }}
           className={cn(
-            'block w-96 mx-24 lg:hidden bg-red-500 h-72 max-h-2xl mb-20 rounded-md overflow-hidden',
+            'block w-96 mx-24 lg:hidden max-h-2xl mb-20 rounded-md overflow-hidden',
             contentClassName
           )}
         >
@@ -56,9 +42,6 @@ export const StickyScroll = ({ content, contentClassName }) => {
 
       </div>
       <motion.div
-        // animate={{
-        //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-        // }}
         className='flex-row scrollbar-hide h-[40rem] overflow-y-auto flex justify-center relative lg:space-x-10 ml-0 rounded-md p-20'
         ref={ref}
       >
@@ -97,11 +80,8 @@ export const StickyScroll = ({ content, contentClassName }) => {
           </div>
         </div>
         <motion.div
-          animate={{
-            background: linearGradients[activeCard % linearGradients.length],
-          }}
           className={cn(
-            'hidden lg:block h-3/4 max-h-2xl w-full max-w-xl rounded-md bg-white sticky top-12 overflow-hidden',
+            'hidden lg:block max-h-2xl w-full max-w-xl rounded-md sticky top-12 overflow-hidden',
             contentClassName
           )}
         >

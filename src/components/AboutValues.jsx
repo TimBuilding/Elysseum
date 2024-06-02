@@ -8,7 +8,7 @@ const AboutValues = () => {
       subtitle:
         'We believe in building solid and long-lasting partnerships with our clients.',
       text: 'By truly understanding their unique challenges, goals, and requirements, we tailor our solutions to meet their specific needs. We collaborate, working closely with our clients to develop strategies that align with their business objectives and deliver measurable results.',
-      path: 'src/images/ClientCentric.svg',
+      path: 'src/images/CodeTyping.svg',
       alt: '',
     },
     {
@@ -16,7 +16,7 @@ const AboutValues = () => {
       subtitle:
         'We are passionate about exploring emerging technologies, industry trends, and best practices.',
       text: 'In the ever-evolving world of technology, staying ahead requires a relentless pursuit of innovation and continuous learning. At Elysseum, we provide our clients with the most up-to-date solutions and recommendations, ensuring they remain at the forefront of technological advancements.',
-      path: 'src/images/Innovation.svg',
+      path: 'src/images/Learning.svg',
       alt: ''
     },
     {
@@ -24,7 +24,7 @@ const AboutValues = () => {
       subtitle:
         'We are committed to delivering the highest quality and security in everything we do.',
       text: " Our team adheres to industry best practices, rigorous quality standards, and the latest cybersecurity protocols. We prioritize protecting our clients' sensitive data and systems and implementing robust security measures to safeguard against threats and vulnerabilities.",
-      path: 'src/images/Security.svg',
+      path: 'src/images/Quality.svg',
       alt: ''
     },
     {
@@ -32,7 +32,7 @@ const AboutValues = () => {
       subtitle:
         "We value open and transparent communication, actively listening to our clients' needs, and responding promptly to their inquiries.",
       text: 'At the heart of our business is a dedication to providing exceptional customer service. Our team is friendly, approachable, and committed to ensuring a positive experience throughout every engagement.',
-      path: 'src/images/CustomerService.svg',
+      path: 'src/images/CX.svg',
       alt: ''
     },
   ];
@@ -48,12 +48,12 @@ const AboutValues = () => {
                 <img
                   src={value.path}
                   alt={value.alt}
-                  className='h-full w-full object-cover mb-8 '
+                  className='max-h-60 max-w-60 object-cover mb-8 '
                 />
                 <div className="px-2 sm:px-6 text-white">
-                  <p className="text-xl sm:text-4xl font-semibold text-[#664b93]">{value.title}</p>
-                  <p className="my-4 text-sm sm:text-xl font-medium">{value.subtitle}</p>
-                  <p className="text-xs sm:text-lg text-justify leading-6">{value.text}</p>
+                  <p className="text-xl font-bold text-[#664b93]">{value.title}</p>
+                  <p className="my-4 text-sm font-semibold">{value.subtitle}</p>
+                  <p className="text-xs text-justify leading-6">{value.text}</p>
                 </div>
               </div>
             </div>

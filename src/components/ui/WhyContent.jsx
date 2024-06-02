@@ -87,7 +87,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="h-48 w-full object-cover rounded-xl"
+                                            className=" w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -98,7 +98,7 @@ function TracingBeam() {
                                         <img
                                             src={item.image2}
                                             alt=""
-                                            className="h-48 w-full object-cover rounded-xl"
+                                            className="w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
@@ -130,7 +130,7 @@ const dummyContent = [
             </p >
         ),
         image1:
-            "src/images/ClientCentric.svg",
+            "src/images/CodeTyping.svg",
     },
     {
         title2: "Innovation & Continuous Learning",
@@ -140,7 +140,7 @@ const dummyContent = [
             </p>
         ),
         image2:
-            "src/images/Innovation.svg",
+            "src/images/Learning.svg",
     },
     {
         title1: "Commitment to Quality & Security",
@@ -150,7 +150,7 @@ const dummyContent = [
             </p>
         ),
         image1:
-            "src/images/Security.svg",
+            "src/images/Quality.svg",
     },
     {
         title2: "Exceptional Customer Service",
@@ -160,6 +160,6 @@ const dummyContent = [
             </p>
         ),
         image2:
-            "src/images/CustomerService.svg",
+            "src/images/CX.svg",
     },
 ];

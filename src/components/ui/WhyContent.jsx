@@ -15,11 +15,11 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
-                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title1}
                                     </p>
@@ -32,13 +32,13 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
                             </div>
                             <div className="flex-col flex items-center md:items-left md:flex-row w-full gap-x-0 md:gap-x-5 mb-16 space-y-10 md:mb-20 group">
-                                <div className="w-80 sm:w-96 group-hover:scale-110 transition ease-in-out">
+                                <div className="w-80 sm:w-96">
                                     {item.image2 && (
                                         <img
                                             src={item.image2}
@@ -47,7 +47,7 @@ function TracingBeam() {
                                         />
                                     )}
                                 </div>
-                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pl-0 md:pl-8 gap-y-5 md:w-2/3 w-72 text-center flex flex-col justify-center">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title2}
                                     </p>
@@ -70,11 +70,11 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
-                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pr-0 md:pr-8 gap-y-5 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title1}
                                     </p>
@@ -87,13 +87,13 @@ function TracingBeam() {
                                         <img
                                             src={item.image1}
                                             alt=""
-                                            className="group-hover:scale-110 transition ease-in-out h-48 w-full object-cover rounded-xl"
+                                            className="h-48 w-full object-cover rounded-xl"
                                         />
                                     )}
                                 </div>
                             </div>
                             <div className="flex-col flex items-center md:items-left md:flex-row w-full gap-x-0 md:gap-x-5 mb-16 space-y-10 md:mb-20 group">
-                                <div className="w-96 group-hover:scale-110 transition ease-in-out">
+                                <div className="w-96">
                                     {item.image2 && (
                                         <img
                                             src={item.image2}
@@ -102,7 +102,7 @@ function TracingBeam() {
                                         />
                                     )}
                                 </div>
-                                <div className="pl-0 md:pl-8 gap-y-5 md:-translate-y-6 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center group-hover:scale-110 transition ease-in-out">
+                                <div className="pl-0 md:pl-8 gap-y-5 md:-translate-y-6 md:w-2/3 lg:w-1/2 w-72 text-center flex flex-col justify-center">
                                     <p className={twMerge("text-xl font-medium")}>
                                         {item.title2}
                                     </p>

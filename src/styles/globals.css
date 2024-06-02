@@ -77,10 +77,44 @@
     }
 
     .card {
-        border-image: radial-gradient(gray, black) 1 round;
+        border-image: radial-gradient(rgb(196, 195, 195), black) 1 round;
         border-width: 2px;
         border-style: solid;
-        border-radius: 5px;
+        border-radius: 9999px;
     }
+
+    /* .card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: 20;
+        border: 2px solid transparent;
+        border-image: radial-gradient(rgb(196, 195, 195), black) 1 stretch;
+        border-radius: 30px;
+    }
+    
+    .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        border: 2px solid transparent;
+        border-image: radial-gradient(rgb(196, 195, 195), black) 1 stretch;
+        border-radius: 20px;
+        transform: translate(-2px, -2px);
+    }*/
+    
 
 }

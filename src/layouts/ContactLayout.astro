@@ -1,0 +1,35 @@
+---
+import '../styles/globals.css';
+import Navigation from '../components/ui/Navigation';
+import Footer from '../components/Footer.astro';
+---
+
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+      rel='stylesheet'
+    />
+
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Elysseum</title>
+  </head>
+  <body
+    class='bg-black text-white font-serif flex flex-col justify-between min-h-screen'
+  >
+      <div class='flex flex-col'>
+        <Navigation client:load />
+        <main class="'flex flex-col">
+          <slot />
+        </main>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

@@ -171,7 +171,7 @@ const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "
             variant={variant}
             size={size}
             className={cn(
-                "h-8 w-8 xl:h-14 xl:w-14 rounded-full hover:bg-[#664b93] hover:border-[#664b93]",
+                "h-8 w-8 xl:h-14 xl:w-14 rounded-full hover:bg-[#664b93] hover:border-[#3f3059]",
                 orientation === "horizontal"
                     ? ""
                     : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -199,7 +199,7 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             variant={variant}
             size={size}
             className={cn(
-                "h-8 w-8 xl:w-14 xl:h-14 rounded-full hover:bg-[#664b93] hover:border-[#664b93]",
+                "h-8 w-8 xl:w-14 xl:h-14 rounded-full hover:bg-[#664b93] hover:border-[#3f3059]",
                 orientation === "horizontal"
                     ? ""
                     : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

@@ -47,7 +47,7 @@ const CarouselValues = () => {
                 <Card className="h-full">
                   <CardContent className="m-4 flex flex-col aspect-video items-center justify-center p-6 pb-10">
                     <div>
-                      <div className="bg-red-500 h-80 mb-8 xl:h-60">
+                      <div className="h-80 mb-8 xl:h-60">
                       </div>
                       <div className="px-6">
                         <p className="text-4xl font-semibold xl:text-2xl">{values.title}</p>

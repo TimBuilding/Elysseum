@@ -1,0 +1,62 @@
+---
+import '../styles/globals.css';
+import Navigation from '../components/ui/Navigation';
+import Footer from '../components/Footer.astro';
+---
+
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+      rel='stylesheet'
+    />
+
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Elysseum</title>
+  </head>
+  <body
+    class='bg-black text-white font-serif flex flex-col justify-between min-h-screen'
+  >
+    <div>
+      <svg
+        class='absolute opacity-40 top-[800px]'
+        height='200'
+        width='200'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <circle r='100' cx='100' cy='100' fill='rgb(41, 41, 41)'></circle>
+      </svg>
+      <svg
+        class='absolute opacity-10 top-[2050px] md:top-[1750px] left-0'
+        height='350'
+        width='350'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <circle r='175' cx='175' cy='175' fill='rgb(204, 138, 245)'></circle>
+      </svg>
+      <svg
+        class='absolute opacity-20 top-[1500px] md:top-[1200px] right-0 overflow-hidden'
+        height='500'
+        width='500'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <circle r='250' cx='250' cy='250' fill='rgb(102,75,147)'></circle>
+      </svg>
+    </div>
+    <div class='backdrop-blur-3xl'>
+      <div class='flex flex-col'>
+        <Navigation client:load />
+        <main class="'flex flex-col">
+          <slot />
+        </main>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

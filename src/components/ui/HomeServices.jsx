@@ -58,7 +58,7 @@ const SCarouselServices = () => {
           {serv.map((serv, index) => {
             return (
               <SCarouselItem key={index} className="aspect-square flex flex-col items-center md:basis-1/3">
-                <div className="p-1 w-full h-full max-w-sm lg:max-w-lg">
+                <div className="p-1 w-full h-full max-w-sm lg:max-w-lg card-wrapper">
                   <div className="relative w-full md:w-48 lg:w-64 xl:w-80 h-full rounded-xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
                     <div className="bg-black rounded-xl absolute inset-0 w-full h-full flex justify-center items-center transition-all duration-100 delay-200 z-20 hover:opacity-0">
                       <CardContent className="rounded-xl flex flex-col h-full w-full max-w-2xl items-center justify-center p-10">

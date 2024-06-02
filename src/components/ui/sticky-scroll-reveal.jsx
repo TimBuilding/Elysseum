@@ -40,14 +40,14 @@ export const StickyScroll = ({ content, contentClassName }) => {
   ];
   return (
     <>
-      <p className='mx-24 mb-10 lg:mb-20 text-center opacity-1 sticky lg:relative block bg-black text-5xl lg:text-6xl font-bold text-[#664B93] '>What We Offer</p>
+      <p className='mx-24 mb-10 lg:mb-20 text-center opacity-1 sticky lg:relative block text-5xl lg:text-6xl font-bold text-[#664B93] '>What We Offer</p>
       <div className='flex flex-row justify-center'>
         <motion.div
           animate={{
             background: linearGradients[activeCard % linearGradients.length],
           }}
           className={cn(
-            'block w-96 mx-24 lg:hidden bg-red-500 h-72 max-h-2xl mb-20 rounded-md bg-white overflow-hidden',
+            'block w-96 mx-24 lg:hidden bg-red-500 h-72 max-h-2xl mb-20 rounded-md overflow-hidden',
             contentClassName
           )}
         >
@@ -56,9 +56,9 @@ export const StickyScroll = ({ content, contentClassName }) => {
 
       </div>
       <motion.div
-        animate={{
-          backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-        }}
+        // animate={{
+        //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        // }}
         className='flex-row scrollbar-hide h-[40rem] overflow-y-auto flex justify-center relative lg:space-x-10 ml-0 rounded-md p-20'
         ref={ref}
       >

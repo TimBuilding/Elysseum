@@ -181,7 +181,7 @@ const SCarouselPrevious = forwardRef(({ className, variant = "outline", size = "
             onClick={scrollPrev}
             {...props}
         >
-            <ArrowLeft className="h-5 w-5" />
+            <ArrowLeft className="h-5 w-5 text-black" />
             <span className="sr-only">Previous slide</span>
         </Button>
     )
@@ -209,7 +209,7 @@ const SCarouselNext = forwardRef(({ className, variant = "outline", size = "icon
             onClick={scrollNext}
             {...props}
         >
-            <ArrowRight className="h-5 w-5"/>
+            <ArrowRight className="h-5 w-5 text-black"/>
             <span className="sr-only">Next slide</span>
         </Button>
     )

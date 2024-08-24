@@ -3,11 +3,11 @@ import InfiniteMovingImages from "../ui/infinite-moving-cards";
 import React from 'react';
 
 const logoImages = [
-  'src/images/tech.svg',
-  'src/images/tech.svg',
-  'src/images/tech.svg',
-  'src/images/tech.svg',
-  'src/images/tech.svg',
+  '/images/tech.svg',
+  '/images/tech.svg',
+  '/images/tech.svg',
+  '/images/tech.svg',
+  '/images/tech.svg',
 ];
 
 const Techno = () => {

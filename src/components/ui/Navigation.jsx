@@ -9,7 +9,7 @@ function Navigation() {
         <nav className="px-10 sm:px-24 flex flex-row pt-3.5 w-full items-center justify-between z-50">
             <a href='/'>
                 <div className="flex flex-row justify-center items-center xl:scale-110">
-                    <img src="/src/images/Logo.png" alt="Elysseum Logo" className="h-12 flex flex-row justify-center" />
+                    <img src="/images/Logo.png" alt="Elysseum Logo" className="h-12 flex flex-row justify-center" />
                     <div className="pl-5 text-2xl font-extrabold">
                         <span className="h-10 flex flex-row items-center justify-center">Elysseum</span>
                     </div>

@@ -94,7 +94,7 @@ function ObjectParallax() {
                 </motion.svg>
             </motion.div>
             <div className="h-full grid place-items-center">
-                <img style={{}} className="relative inset-0 z-0 bottom-0 object-cover h-72" src="src/images/Logo.png">
+                <img style={{}} className="relative inset-0 z-0 bottom-0 object-cover h-72" src="/images/Logo.png">
                 </img>
             </div>
         </div>

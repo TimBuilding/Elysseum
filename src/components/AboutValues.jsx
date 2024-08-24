@@ -42,7 +42,7 @@ const AboutValues = () => {
       {values.map((value, index) => (
         <div key={`content-${index}`}>
           <div class='mx-auto flex w-full items-center justify-center'>
-            <div class='relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-xl border border-slate-800 p-[1.5px]'>
+            <div class='relative z-10 flex w-full items-center overflow-hidden rounded-xl border border-slate-800 p-[1.5px]'>
               <div class='animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]'></div>
               <div class='relative z-20 w-full rounded-[0.60rem] h-[600px] bg-black p-8 pb-10 flex flex-col items-center justify-center'>
                 <img
